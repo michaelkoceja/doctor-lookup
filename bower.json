@@ -1,0 +1,17 @@
+{
+  "name": "Doctor-Lookup",
+  "description": "Application used to search for doctors based on symtoms",
+  "main": "index.js",
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1"
+  }
+}
