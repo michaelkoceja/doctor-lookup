@@ -1,8 +1,18 @@
-var ExampleModule = require('./../js/scripts.js').exampleModule;
+var User = require('./../js/scripts.js').userModule;
 
+var displayDoctors = function(array) {
+  array.forEach(function(data) {
+    $("#doctors").append('<p><h2>' + 'Dr. ' + data.firstName + ' ' + data.lastName + ' ' + '</h2><br>' + data.bio + '</p>');
+  });
+};
 
 $(document).ready(function() {
-  var exampleInstance = new ExampleModule('args');
+  $('#user-form').submit(function(event) {
+    event.preventDefault();
+    var currentUser = new User();
+    var symptom = $('#symptom').val();
 
-  console.log(exampleInstance.examplePrototype());
+    currentUser.getDoctors(symptom, displayDoctors);
+
+  });
 });

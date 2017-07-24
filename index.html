@@ -1,14 +1,24 @@
+
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <title></title>
-    <!-- <link rel="stylesheet" href="build/css/vendor.css"> UNCOMMENT IF YOU INSTALL ANY CSS COMPONENTS WITH BOWER -->
     <link rel="stylesheet" href="build/css/styles.css">
-    <script type="text/javascript" src="build/js/vendor.min.js"></script>
+    <script src="build/js/vendor.min.js"></script>
     <script type="text/javascript" src="build/js/app.js"></script>
+    <title>Doctor Lookup</title>
   </head>
   <body>
-    <!-- html goes here -->
+      <div class="container">
+        <h1>Something wrong?</h1>
+        <h3>Find a doctor near you</h3>
+        <form id="user-form">
+          <label for="symptom">Enter a symptom:</label>
+          <input id="symptom" type="text" placeholder="Ex. Tooth Ache">
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    <div class="results">
+      <ul id="doctors"></ul>
+    </div>
   </body>
 </html>
